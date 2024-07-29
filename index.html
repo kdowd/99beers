@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>99 Bottles</h1>
+
+    <!-- 99 bottles of beer on the wall, 99 bottles of beer.
+Take one down and pass it around, 98 bottles of beer on the wall. -->
+
+    <script>
+      var startCounter = 99;
+
+      for (var i = startCounter; i >= 0; i--) {
+        var currentCount = i;
+        var offsetCount = currentCount - 1;
+        var str;
+
+        if (currentCount >= 2) {
+          str = `${currentCount} bottles of beer on the wall, ${currentCount} bottles of beer. Take one down and pass it around, ${offsetCount} bottles of beer on the wall.`;
+        } else if (currentCount == 1) {
+          str = `${currentCount} bottle of beer on the wall, ${currentCount} bottle of beer. Take one down and pass it around, no more bottles of beer on the wall.`;
+        } else {
+          str =
+            "No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.";
+        }
+
+        document.write(str + "<br>");
+      }
+    </script>
+  </body>
+</html>
